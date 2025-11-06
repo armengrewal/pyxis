@@ -1,1 +1,181 @@
-Test Page
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Pyxis: Travel Journal</title>
+    <meta
+      name="description"
+      content="Pin locations, capture memories, and check the weather. Pyxis is your private travel companion."
+    />
+    <link rel="apple-touch-icon" href="assets/icon.png" />
+    <link rel="stylesheet" href="assets/style.css" />
+  </head>
+  <body>
+    <!-- Primary Navigation -->
+    <header class="site-header" role="banner">
+      <div class="site-header__inner">
+        <a class="site-header__brand" href="index.html">Pyxis</a>
+        <nav class="site-nav" aria-label="Primary navigation">
+          <ul class="site-nav__list">
+            <li>
+              <a class="site-nav__link" href="index.html" aria-current="page">Home</a>
+            </li>
+            <li>
+              <a class="site-nav__link" href="privacy.html">Privacy</a>
+            </li>
+            <li>
+              <a
+                class="site-nav__link"
+                href=""
+                target="_blank"
+                rel="noopener noreferrer"
+                >Press Kit</a
+              >
+            </li>
+            <li>
+              <a class="site-nav__link" href="https://apps.apple.com/us/app/pyxis-notes-locations/id6639617144">Download</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main id="home">
+      <div class="container">
+        <!-- Hero -->
+        <header>
+          <img src="assets/icon.png" alt="Pyxis App Icon" class="icon" />
+          <h1>Pyxis: Travel Journal</h1>
+          <p class="subtitle">
+            Capture everything related to your favorite places.
+            <br /><br />Take notes, add photos, check weather, get sunrise and sunset times.
+            <br />Organize with tags, symbols, and colors. 
+          </p>
+          <a
+            href="https://apps.apple.com/us/app/pyxis-notes-locations/id6639617144"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="assets/app-store-badge.svg"
+              alt="Download on the App Store"
+              style="height: 75px;"
+            />
+          </a>
+        </header>
+
+        <!-- Press Kit Tabs -->
+        <section class="screenshots" id="screenshots">
+
+          <!-- Tab Controls -->
+          <div class="tabs" role="tablist" aria-label="Device screenshots">
+            <button
+              class="tab-button active"
+              data-target="screenshots-iphone"
+              role="tab"
+              aria-selected="true"
+              aria-controls="screenshots-iphone"
+              id="tab-iphone"
+              tabindex="0"
+            >
+              iPhone
+            </button>
+            <button
+              class="tab-button"
+              data-target="screenshots-ipad"
+              role="tab"
+              aria-selected="false"
+              aria-controls="screenshots-ipad"
+              id="tab-ipad"
+              tabindex="-1"
+            >
+              iPad
+            </button>
+          </div>
+
+          <!-- iPhone Gallery -->
+          <div
+            class="tab-content active"
+            id="screenshots-iphone"
+            role="tabpanel"
+            aria-labelledby="tab-iphone"
+          >
+            <h3 class="visually-hidden">iPhone Screenshots</h3>
+            <div class="screenshots-grid-iPhone">
+              <img src="assets/6.5_ Display - 1.jpg" alt="iPhone Screenshot 1" />
+              <img src="assets/6.5_ Display - 2.jpg" alt="iPhone Screenshot 2" />
+              <img src="assets/6.5_ Display - 3.jpg" alt="iPhone Screenshot 3" />
+              <img src="assets/6.5_ Display - 4.jpg" alt="iPhone Screenshot 4" />
+              <img src="assets/6.5_ Display - 5.jpg" alt="iPhone Screenshot 5" />
+              <img src="assets/6.5_ Display - 6.jpg" alt="iPhone Screenshot 6" />
+              <img src="assets/6.5_ Display - 7.jpg" alt="iPhone Screenshot 7" />
+              <img src="assets/6.5_ Display - 8.jpg" alt="iPhone Screenshot 8" />
+            </div>
+          </div>
+
+          <!-- iPad Gallery -->
+          <div
+            class="tab-content"
+            id="screenshots-ipad"
+            role="tabpanel"
+            aria-labelledby="tab-ipad"
+            hidden
+          >
+            <h3 class="visually-hidden">iPad Screenshots</h3>
+            <div class="screenshots-grid-iPad">
+              <img src="assets/iPad Pro - 1.jpg" alt="iPad Screenshot 1" />
+              <img src="assets/iPad Pro - 2.jpg" alt="iPad Screenshot 2" />
+              <img src="assets/iPad Pro - 3.jpg" alt="iPad Screenshot 3" />
+              <img src="assets/iPad Pro - 4.jpg" alt="iPad Screenshot 4" />
+              <img src="assets/iPad Pro - 5.jpg" alt="iPad Screenshot 5" />
+              <img src="assets/iPad Pro - 6.jpg" alt="iPad Screenshot 6" />
+              <img src="assets/iPad Pro - 7.jpg" alt="iPad Screenshot 7" />
+              <img src="assets/iPad Pro - 8.jpg" alt="iPad Screenshot 8" />
+            </div>
+          </div>
+        </section>
+
+        <!-- Legal Footer -->
+        <footer>
+          &copy; 2025 Pyxis. All rights reserved.
+        </footer>
+      </div>
+    </main>
+
+    <!-- Site Footer Links -->
+    <footer class="site-footer">
+      <a href="privacy.html">Privacy Policy</a>
+      <span class="divider">|</span>
+      <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula">Terms of Use</a>
+    </footer>
+
+    <!-- Tabs Interaction -->
+    <script>
+      (function () {
+        const tabButtons = document.querySelectorAll('.tab-button');
+        const tabPanels = document.querySelectorAll('.tab-content');
+
+        tabButtons.forEach((button) => {
+          button.addEventListener('click', () => {
+            const targetId = button.getAttribute('data-target');
+
+            tabButtons.forEach((btn) => {
+              const isActive = btn === button;
+              btn.classList.toggle('active', isActive);
+              btn.setAttribute('aria-selected', isActive);
+              btn.setAttribute('tabindex', isActive ? '0' : '-1');
+            });
+
+            tabPanels.forEach((panel) => {
+              const isActive = panel.id === targetId;
+              panel.classList.toggle('active', isActive);
+              panel.toggleAttribute('hidden', !isActive);
+            });
+          });
+        });
+      })();
+    </script>
+  </body>
+</html>

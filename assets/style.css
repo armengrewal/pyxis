@@ -57,24 +57,35 @@ footer {
 }
 
 .privacy-page header,
-.privacy-page section {
+.privacy-page section,
+.contact-page header,
+.contact-page section {
   text-align: left;
 }
 
-.privacy-page .site-footer {
+.privacy-page .site-footer,
+.contact-page .site-footer {
   text-align: center;
 }
 
-.privacy-page main a {
+.privacy-page main a,
+.contact-page main a,
+.presskit-page main a {
   color: var(--color-link);
 }
 
-.privacy-page main a:visited {
+.privacy-page main a:visited,
+.contact-page main a:visited,
+.presskit-page main a:visited {
   color: var(--color-link);
 }
 
 .privacy-page main a:hover,
-.privacy-page main a:focus-visible {
+.privacy-page main a:focus-visible,
+.contact-page main a:hover,
+.contact-page main a:focus-visible,
+.presskit-page main a:hover,
+.presskit-page main a:focus-visible {
   color: var(--color-link-highlight);
 }
 

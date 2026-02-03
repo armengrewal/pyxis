@@ -1,22 +1,22 @@
 :root {
-  --color-background: rgb(244, 234, 223);
-  --color-text: #333;
-  --color-subtext: #666;
-  --color-brand: rgb(41, 106, 149);
-  --color-link: #509cff;
-  --color-link-highlight: #4a769a;
-  --color-nav-background: rgb(244, 234, 223);
-  --color-nav-text: #333;
-  --color-button-background: #007aff;
+  --color-background: #fff;
+  --color-text: #888;
+  --color-subtext: rgba(0, 0, 0, 0.7);
+  --color-brand: #000;
+  --color-link: #000;
+  --color-link-highlight: #000;
+  --color-nav-background: #fff;
+  --color-nav-text: #888;
+  --color-button-background: #000;
   --color-button-text: #fff;
-  --color-footer-text: #999;
-  --color-footer-link: #666;
-  --color-footer-divider: #aaa;
+  --color-footer-text: rgba(0, 0, 0, 0.7);
+  --color-footer-link: #000;
+  --color-footer-divider: rgba(0, 0, 0, 0.35);
   --color-surface: #fff;
   --color-tab-background: rgba(255, 255, 255, 0.85);
   --color-tab-border: rgba(0, 0, 0, 0.12);
   --color-tab-hover-border: rgba(0, 0, 0, 0.2);
-  --color-tab-focus-outline: rgb(41, 106, 149);
+  --color-tab-focus-outline: #000;
   --color-tab-active-text: #fff;
   --shadow-nav: 0 2px 4px rgba(0, 0, 0, 0.1);
   --shadow-card: 0 10px 20px rgba(0, 0, 0, 0.12), 0 4px 6px rgba(0, 0, 0, 0.08);
@@ -32,12 +32,23 @@ html {
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-family: "Open Sans", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-weight: 300;
   margin: 0;
   padding: 0;
   line-height: 1.6;
   background: var(--color-background);
   color: var(--color-text);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #000;
+  font-weight: 300;
 }
 
 main {
@@ -131,7 +142,7 @@ p.subtitle {
   font-size: 1.5rem;
   font-weight: 400;
   letter-spacing: 0.04em;
-  color: var(--color-nav-text);
+  color: #000;
   text-decoration: none;
 }
 
@@ -157,11 +168,11 @@ p.subtitle {
 
 .site-nav__link:hover,
 .site-nav__link:focus-visible {
-  color: rgba(51, 51, 51, 0.6);
+  color: #000;
 }
 
 .site-nav__link[aria-current="page"] {
-  color: var(--color-nav-text);
+  color: #000;
   text-decoration: underline;
   text-decoration-thickness: 2px;
   text-underline-offset: 0.35rem;
@@ -327,6 +338,72 @@ footer {
 
 .tab-content.active {
   display: block;
+}
+
+/* =====================================
+   Lightbox
+===================================== */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background: rgba(0, 0, 0, 0.9);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+  z-index: 2000;
+}
+
+.lightbox.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.lightbox__content {
+  position: relative;
+  max-width: 92vw;
+  max-height: 88vh;
+  width: max-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.lightbox__image {
+  max-width: 92vw;
+  max-height: 88vh;
+  border-radius: 12px;
+  background: #fff;
+}
+
+.lightbox__caption {
+  color: #fff;
+  font-size: 0.95rem;
+}
+
+.lightbox__close {
+  position: absolute;
+  top: -2.5rem;
+  right: 0;
+  border: 1px solid #fff;
+  background: #000;
+  color: #fff;
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.lightbox__close:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}
+
+.screenshots img {
+  cursor: zoom-in;
 }
 
 /* =====================================

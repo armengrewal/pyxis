@@ -3,37 +3,45 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Pyxis: Trip Planner - Notes, Photos, Weather</title>
     <meta
       name="description"
       content="Pin locations, capture memories, and check the weather. Pyxis is your private travel companion."
     />
-    <link rel="apple-touch-icon" href="assets/icon.png" />
+    <link rel="apple-touch-icon" href="assets/app icons/App Icon.png" />
     <link rel="stylesheet" href="assets/style.css" />
+    <script src="assets/theme-toggle.js" defer></script>
   </head>
   <body>
     <!-- Primary Navigation -->
     <header class="site-header" role="banner">
       <div class="site-header__inner">
         <a class="site-header__brand" href="index.html">Pyxis</a>
-        <nav class="site-nav" aria-label="Primary navigation">
-          <ul class="site-nav__list">
-            <li>
-              <a class="site-nav__link" href="index.html" aria-current="page">Home</a>
-            </li>
-            <li>
-              <a class="site-nav__link" href="privacy.html">Privacy</a>
-            </li>
-            <li>
-              <a class="site-nav__link" href="contact.html">Contact</a>
-            </li>
-            <li>
-              <a class="site-nav__link" href="presskit.html">Press Kit</a>
-            </li>
-            <li>
-              <a class="site-nav__link" href="https://apps.apple.com/us/app/pyxis-notes-locations/id6639617144">Download</a>
-            </li>
-          </ul>
-        </nav>
+        <div class="site-header__actions">
+          <nav class="site-nav" aria-label="Primary navigation">
+            <ul class="site-nav__list">
+              <li>
+                <a class="site-nav__link" href="index.html" aria-current="page">Home</a>
+              </li>
+              <li>
+                <a class="site-nav__link" href="shortcuts.html">Shortcuts</a>
+              </li>
+              <li>
+                <a class="site-nav__link" href="privacy.html">Privacy</a>
+              </li>
+              <li>
+                <a class="site-nav__link" href="contact.html">Contact</a>
+              </li>
+              <li>
+                <a class="site-nav__link" href="presskit.html">Press Kit</a>
+              </li>
+              <li>
+                <a class="site-nav__link" href="https://apps.apple.com/us/app/pyxis-notes-locations/id6639617144">Download</a>
+              </li>
+            </ul>
+          </nav>
+          <button class="theme-toggle" type="button" data-theme-toggle aria-label="Toggle theme"></button>
+        </div>
       </div>
     </header>
 
@@ -42,11 +50,11 @@
       <div class="container">
         <!-- Hero -->
         <header>
-          <img src="assets/icon.png" alt="Pyxis App Icon" class="icon" />
-          <h1>Pyxis: Travel Journal</h1>
+          <img src="assets/app icons/App Icon.png" alt="Pyxis App Icon" class="icon" />
+          <h1>Pyxis: Trip Planner</h1>
           <p class="subtitle">
             Capture everything related to your favorite places.
-            <br /><br />Take notes, add photos, check weather, get sunrise and sunset times.
+            <br /><br />Take notes, add tasks, add photos, check historical weather  <br /> in addition to weather forecasts, get sunrise and sunset times.
             <br />Organize with tags, symbols, and colors. 
           </p>
           <a
@@ -62,75 +70,42 @@
           </a>
         </header>
 
-        <!-- Press Kit Tabs -->
-        <section class="screenshots" id="screenshots">
-          <h2>Screenshots</h2>
-
-          <!-- Tab Controls -->
-          <div class="tabs" role="tablist" aria-label="Device screenshots">
-            <button
-              class="tab-button active"
-              data-target="screenshots-iphone"
-              role="tab"
-              aria-selected="true"
-              aria-controls="screenshots-iphone"
-              id="tab-iphone"
+        <h2 class="upcoming-release">Pyxis 3.5 releasing on April 27th!</h2>
+        <section class="banner-gallery" aria-label="Pyxis banners">
+          <div class="banner-gallery__grid">
+            <img
+              class="banner-gallery__image"
+              src="assets/Banner Images/Pyxis Banner - Favorite Locations Large.jpeg"
+              data-banner-png="assets/Banner Images/Pyxis Banner - Favorite Locations.png"
+              alt="Pyxis banner for favorite locations"
+              loading="lazy"
+              decoding="async"
               tabindex="0"
-            >
-              iPhone
-            </button>
-            <button
-              class="tab-button"
-              data-target="screenshots-ipad"
-              role="tab"
-              aria-selected="false"
-              aria-controls="screenshots-ipad"
-              id="tab-ipad"
-              tabindex="-1"
-            >
-              iPad
-            </button>
-          </div>
-
-          <!-- iPhone Gallery -->
-          <div
-            class="tab-content active"
-            id="screenshots-iphone"
-            role="tabpanel"
-            aria-labelledby="tab-iphone"
-          >
-            <h3 class="visually-hidden">iPhone Screenshots</h3>
-            <div class="screenshots-grid-iPhone">
-              <img src="assets/6.5_ Display - 1.jpg" alt="iPhone Screenshot 1" />
-              <img src="assets/6.5_ Display - 2.jpg" alt="iPhone Screenshot 2" />
-              <img src="assets/6.5_ Display - 3.jpg" alt="iPhone Screenshot 3" />
-              <img src="assets/6.5_ Display - 4.jpg" alt="iPhone Screenshot 4" />
-              <img src="assets/6.5_ Display - 5.jpg" alt="iPhone Screenshot 5" />
-              <img src="assets/6.5_ Display - 6.jpg" alt="iPhone Screenshot 6" />
-              <img src="assets/6.5_ Display - 7.jpg" alt="iPhone Screenshot 7" />
-              <img src="assets/6.5_ Display - 8.jpg" alt="iPhone Screenshot 8" />
-            </div>
-          </div>
-
-          <!-- iPad Gallery -->
-          <div
-            class="tab-content"
-            id="screenshots-ipad"
-            role="tabpanel"
-            aria-labelledby="tab-ipad"
-            hidden
-          >
-            <h3 class="visually-hidden">iPad Screenshots</h3>
-            <div class="screenshots-grid-iPad">
-              <img src="assets/iPad Pro - 1.jpg" alt="iPad Screenshot 1" />
-              <img src="assets/iPad Pro - 2.jpg" alt="iPad Screenshot 2" />
-              <img src="assets/iPad Pro - 3.jpg" alt="iPad Screenshot 3" />
-              <img src="assets/iPad Pro - 4.jpg" alt="iPad Screenshot 4" />
-              <img src="assets/iPad Pro - 5.jpg" alt="iPad Screenshot 5" />
-              <img src="assets/iPad Pro - 6.jpg" alt="iPad Screenshot 6" />
-              <img src="assets/iPad Pro - 7.jpg" alt="iPad Screenshot 7" />
-              <img src="assets/iPad Pro - 8.jpg" alt="iPad Screenshot 8" />
-            </div>
+              role="button"
+              aria-label="Open PNG for favorite locations banner"
+            />
+            <img
+              class="banner-gallery__image"
+              src="assets/Banner Images/Pyxis Banner - Productivity Focused Large.jpeg"
+              data-banner-png="assets/Banner Images/Pyxis Banner - Productivity Focused.png"
+              alt="Pyxis productivity focused banner"
+              loading="lazy"
+              decoding="async"
+              tabindex="0"
+              role="button"
+              aria-label="Open PNG for productivity focused banner"
+            />
+            <img
+              class="banner-gallery__image"
+              src="assets/Banner Images/Pyxis Banner - Historical Weather & Forecasts Large.jpeg"
+              data-banner-png="assets/Banner Images/Pyxis Banner - Historical Weather & Forecasts.png"
+              alt="Pyxis banner for historical weather and forecasts"
+              loading="lazy"
+              decoding="async"
+              tabindex="0"
+              role="button"
+              aria-label="Open PNG for historical weather and forecasts banner"
+            />
           </div>
         </section>
 
@@ -148,7 +123,6 @@
       <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula">Terms of Use</a>
     </footer>
 
-    <!-- Lightbox -->
     <div class="lightbox" role="dialog" aria-modal="true" aria-hidden="true">
       <div class="lightbox__content">
         <button class="lightbox__close" type="button" aria-label="Close image">Close</button>
@@ -157,23 +131,21 @@
       </div>
     </div>
 
-    <!-- Tabs Interaction -->
     <script>
       (function () {
-        const tabButtons = document.querySelectorAll('.tab-button');
-        const tabPanels = document.querySelectorAll('.tab-content');
+        const bannerImages = document.querySelectorAll('.banner-gallery__image');
         const lightbox = document.querySelector('.lightbox');
         const lightboxImage = document.querySelector('.lightbox__image');
         const lightboxCaption = document.querySelector('.lightbox__caption');
         const lightboxClose = document.querySelector('.lightbox__close');
-        const galleryImages = document.querySelectorAll('.screenshots img');
         let lastFocused = null;
 
         const openLightbox = (img) => {
-          if (!img || !lightbox) return;
+          const pngSrc = img.getAttribute('data-banner-png');
+          if (!pngSrc || !lightbox) return;
           lastFocused = document.activeElement;
-          lightboxImage.src = img.src;
-          lightboxImage.alt = img.alt || 'Screenshot';
+          lightboxImage.src = pngSrc;
+          lightboxImage.alt = img.alt || 'Banner image';
           lightboxCaption.textContent = img.alt || '';
           lightbox.classList.add('open');
           lightbox.setAttribute('aria-hidden', 'false');
@@ -193,36 +165,15 @@
           }
         };
 
-        tabButtons.forEach((button) => {
-          button.addEventListener('click', () => {
-            const targetId = button.getAttribute('data-target');
-
-            tabButtons.forEach((btn) => {
-              const isActive = btn === button;
-              btn.classList.toggle('active', isActive);
-              btn.setAttribute('aria-selected', isActive);
-              btn.setAttribute('tabindex', isActive ? '0' : '-1');
-            });
-
-            tabPanels.forEach((panel) => {
-              const isActive = panel.id === targetId;
-              panel.classList.toggle('active', isActive);
-              panel.toggleAttribute('hidden', !isActive);
-            });
+        bannerImages.forEach((img) => {
+          img.addEventListener('click', () => {
+            openLightbox(img);
           });
-        });
 
-        galleryImages.forEach((img) => {
-          img.setAttribute('tabindex', '0');
-          img.setAttribute('role', 'button');
-          img.setAttribute('aria-label', `Open ${img.alt || 'screenshot'}`);
-
-          img.addEventListener('click', () => openLightbox(img));
           img.addEventListener('keydown', (event) => {
-            if (event.key === 'Enter' || event.key === ' ') {
-              event.preventDefault();
-              openLightbox(img);
-            }
+            if (event.key !== 'Enter' && event.key !== ' ') return;
+            event.preventDefault();
+            openLightbox(img);
           });
         });
 

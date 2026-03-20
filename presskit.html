@@ -3,53 +3,164 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Pyxis: Notes — Press Kit</title>
+    <title>Pyxis: Trip Planner — Press Kit</title>
     <meta
       name="description"
-      content="Download the Pyxis: Notes media kit, screenshots, and brand assets for coverage or partnership requests."
+      content="Download the Pyxis: Trip Planner media kit, screenshots, and brand assets for coverage or partnership requests."
     />
-    <link rel="apple-touch-icon" href="assets/icon.png" />
+    <link rel="apple-touch-icon" href="assets/app icons/App Icon.png" />
     <link rel="stylesheet" href="assets/style.css" />
+    <script src="assets/theme-toggle.js" defer></script>
   </head>
   <body class="presskit-page">
     <!-- Primary Navigation -->
     <header class="site-header" role="banner">
       <div class="site-header__inner">
         <a class="site-header__brand" href="index.html">Pyxis</a>
-        <nav class="site-nav" aria-label="Primary navigation">
-          <ul class="site-nav__list">
-            <li>
-              <a class="site-nav__link" href="index.html">Home</a>
-            </li>
-            <li>
-              <a class="site-nav__link" href="privacy.html">Privacy</a>
-            </li>
-            <li>
-              <a class="site-nav__link" href="contact.html">Contact</a>
-            </li>
-            <li>
-              <a class="site-nav__link" href="presskit.html" aria-current="page">Press Kit</a>
-            </li>
-            <li>
-              <a class="site-nav__link" href="https://apps.apple.com/us/app/pyxis-notes-locations/id6639617144">Download</a>
-            </li>
-          </ul>
-        </nav>
+        <div class="site-header__actions">
+          <nav class="site-nav" aria-label="Primary navigation">
+            <ul class="site-nav__list">
+              <li>
+                <a class="site-nav__link" href="index.html">Home</a>
+              </li>
+              <li>
+                <a class="site-nav__link" href="shortcuts.html">Shortcuts</a>
+              </li>
+              <li>
+                <a class="site-nav__link" href="privacy.html">Privacy</a>
+              </li>
+              <li>
+                <a class="site-nav__link" href="contact.html">Contact</a>
+              </li>
+              <li>
+                <a class="site-nav__link" href="presskit.html" aria-current="page">Press Kit</a>
+              </li>
+              <li>
+                <a class="site-nav__link" href="https://apps.apple.com/us/app/pyxis-notes-locations/id6639617144">Download</a>
+              </li>
+            </ul>
+          </nav>
+          <button class="theme-toggle" type="button" data-theme-toggle aria-label="Toggle theme"></button>
+        </div>
       </div>
     </header>
 
     <!-- Press Kit Content -->
     <main id="press-kit">
       <div class="container">
-        <header>
+        <header id="media-kit">
           <h1>Press Kit</h1>
-          <p>Grab the latest assets assets for press or partnership coverage: <a
+          <p>Grab the latest assets for press or partnership coverage:<br /><a
               href="https://www.dropbox.com/scl/fo/2zwq6wu0hmxe2buw9f726/AHJCZpNW3kLe-zn3_dEAZyo?rlkey=fo6jz3sleas2jruokikyactcx&dl=0"
               target="_blank"
               rel="noopener noreferrer"
-              >Press Kit</a
-            >.</p>
+              >Press Kit v3.0</a
+            > | <a
+              href="https://www.dropbox.com/scl/fo/rmgc15g1qpqymmu59uk1y/AJu57hZkyr0gZAIiUvcNNp8?rlkey=rflx4jpv9av4rr9wsezeqdsq8&dl=0"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Press Kit v3.5</a
+            ></p>
         </header>
+
+        <h2 class="upcoming-release">Pyxis 3.5 releasing on April 27th!</h2>
+        <section class="app-icons" id="app-icons">
+          <h2>App Icons</h2>
+          <div class="app-icons-grid">
+            <img
+              src="assets/app icons/App Icon.png"
+              data-lightbox-src="assets/app icons/App Icon - 2x.png"
+              alt="Pyxis app icon"
+              loading="lazy"
+              decoding="async"
+              tabindex="0"
+              role="button"
+              aria-label="Open 2x Pyxis app icon"
+            />
+            <img
+              src="assets/app icons/App Icon - Dark.png"
+              data-lightbox-src="assets/app icons/App Icon - Dark - 2x.png"
+              alt="Pyxis app icon dark"
+              loading="lazy"
+              decoding="async"
+              tabindex="0"
+              role="button"
+              aria-label="Open 2x dark Pyxis app icon"
+            />
+          </div>
+        </section>
+
+        <section class="screenshots" id="screenshots">
+          <h2>Screenshots</h2>
+
+          <div class="tabs" role="tablist" aria-label="Device screenshots">
+            <button
+              class="tab-button active"
+              data-target="screenshots-iphone"
+              role="tab"
+              aria-selected="true"
+              aria-controls="screenshots-iphone"
+              id="tab-iphone"
+              tabindex="0"
+            >
+              iPhone
+            </button>
+            <button
+              class="tab-button"
+              data-target="screenshots-ipad"
+              role="tab"
+              aria-selected="false"
+              aria-controls="screenshots-ipad"
+              id="tab-ipad"
+              tabindex="-1"
+            >
+              iPad
+            </button>
+          </div>
+
+          <div
+            class="tab-content active"
+            id="screenshots-iphone"
+            role="tabpanel"
+            aria-labelledby="tab-iphone"
+          >
+            <h3 class="visually-hidden">iPhone Screenshots</h3>
+            <div class="screenshots-grid-iPhone">
+              <img src="assets/iPhone Images/iPhone - 1.jpeg" alt="iPhone Screenshot 1" loading="lazy" decoding="async" />
+              <img src="assets/iPhone Images/iPhone - 2.jpeg" alt="iPhone Screenshot 2" loading="lazy" decoding="async" />
+              <img src="assets/iPhone Images/iPhone - 3.jpeg" alt="iPhone Screenshot 3" loading="lazy" decoding="async" />
+              <img src="assets/iPhone Images/iPhone - 4.jpeg" alt="iPhone Screenshot 4" loading="lazy" decoding="async" />
+              <img src="assets/iPhone Images/iPhone - 5.jpeg" alt="iPhone Screenshot 5" loading="lazy" decoding="async" />
+              <img src="assets/iPhone Images/iPhone - 6.jpeg" alt="iPhone Screenshot 6" loading="lazy" decoding="async" />
+              <img src="assets/iPhone Images/iPhone - 7.jpeg" alt="iPhone Screenshot 7" loading="lazy" decoding="async" />
+              <img src="assets/iPhone Images/iPhone - 8.jpeg" alt="iPhone Screenshot 8" loading="lazy" decoding="async" />
+              <img src="assets/iPhone Images/iPhone - 9.jpeg" alt="iPhone Screenshot 9" loading="lazy" decoding="async" />
+              <img src="assets/iPhone Images/iPhone - 10.jpeg" alt="iPhone Screenshot 10" loading="lazy" decoding="async" />
+            </div>
+          </div>
+
+          <div
+            class="tab-content"
+            id="screenshots-ipad"
+            role="tabpanel"
+            aria-labelledby="tab-ipad"
+            hidden
+          >
+            <h3 class="visually-hidden">iPad Screenshots</h3>
+            <div class="screenshots-grid-iPad">
+              <img src="assets/iPad Images/iPad Pro - 1.jpeg" alt="iPad Screenshot 1" loading="lazy" decoding="async" />
+              <img src="assets/iPad Images/iPad Pro - 2.jpeg" alt="iPad Screenshot 2" loading="lazy" decoding="async" />
+              <img src="assets/iPad Images/iPad Pro - 3.jpeg" alt="iPad Screenshot 3" loading="lazy" decoding="async" />
+              <img src="assets/iPad Images/iPad Pro - 4.jpeg" alt="iPad Screenshot 4" loading="lazy" decoding="async" />
+              <img src="assets/iPad Images/iPad Pro - 5.jpeg" alt="iPad Screenshot 5" loading="lazy" decoding="async" />
+              <img src="assets/iPad Images/iPad Pro - 6.jpeg" alt="iPad Screenshot 6" loading="lazy" decoding="async" />
+              <img src="assets/iPad Images/iPad Pro - 7.jpeg" alt="iPad Screenshot 7" loading="lazy" decoding="async" />
+              <img src="assets/iPad Images/iPad Pro - 8.jpeg" alt="iPad Screenshot 8" loading="lazy" decoding="async" />
+              <img src="assets/iPad Images/iPad Pro - 9.jpeg" alt="iPad Screenshot 9" loading="lazy" decoding="async" />
+              <img src="assets/iPad Images/iPad Pro - 10.jpeg" alt="iPad Screenshot 10" loading="lazy" decoding="async" />
+            </div>
+          </div>
+        </section>
       </div>
     </main>
 
@@ -59,5 +170,125 @@
       <span class="divider">|</span>
       <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula">Terms of Use</a>
     </footer>
+
+    <div class="lightbox" role="dialog" aria-modal="true" aria-hidden="true">
+      <div class="lightbox__content">
+        <button class="lightbox__close" type="button" aria-label="Close image">Close</button>
+        <img class="lightbox__image" alt="" />
+        <div class="lightbox__caption" aria-live="polite"></div>
+      </div>
+    </div>
+
+    <script>
+      (function () {
+        const tabButtons = document.querySelectorAll('.tab-button');
+        const tabPanels = document.querySelectorAll('.tab-content');
+        const lightbox = document.querySelector('.lightbox');
+        const lightboxImage = document.querySelector('.lightbox__image');
+        const lightboxCaption = document.querySelector('.lightbox__caption');
+        const lightboxClose = document.querySelector('.lightbox__close');
+        const galleryImages = document.querySelectorAll('.screenshots img');
+        const appIconImages = document.querySelectorAll('.app-icons-grid img');
+        let lastFocused = null;
+        let activeTabIndex = 0;
+
+        const openLightbox = (img) => {
+          if (!img || !lightbox) return;
+          lastFocused = document.activeElement;
+          lightboxImage.src = img.getAttribute('data-lightbox-src') || img.src;
+          lightboxImage.alt = img.alt || 'Screenshot';
+          lightboxCaption.textContent = img.alt || '';
+          lightbox.classList.add('open');
+          lightbox.setAttribute('aria-hidden', 'false');
+          document.body.style.overflow = 'hidden';
+          lightboxClose.focus();
+        };
+
+        const closeLightbox = () => {
+          if (!lightbox) return;
+          lightbox.classList.remove('open');
+          lightbox.setAttribute('aria-hidden', 'true');
+          lightboxImage.src = '';
+          lightboxCaption.textContent = '';
+          document.body.style.overflow = '';
+          if (lastFocused && typeof lastFocused.focus === 'function') {
+            lastFocused.focus();
+          }
+        };
+
+        const activateTab = (button) => {
+          const targetId = button.getAttribute('data-target');
+
+          tabButtons.forEach((btn, index) => {
+            const isActive = btn === button;
+            btn.classList.toggle('active', isActive);
+            btn.setAttribute('aria-selected', isActive);
+            btn.setAttribute('tabindex', isActive ? '0' : '-1');
+            if (isActive) activeTabIndex = index;
+          });
+
+          tabPanels.forEach((panel) => {
+            const isActive = panel.id === targetId;
+            panel.classList.toggle('active', isActive);
+            panel.toggleAttribute('hidden', !isActive);
+          });
+        };
+
+        tabButtons.forEach((button) => {
+          button.addEventListener('click', () => {
+            activateTab(button);
+          });
+
+          button.addEventListener('keydown', (event) => {
+            if (event.key !== 'ArrowLeft' && event.key !== 'ArrowRight') return;
+            event.preventDefault();
+            const nextIndex =
+              event.key === 'ArrowRight'
+                ? (activeTabIndex + 1) % tabButtons.length
+                : (activeTabIndex - 1 + tabButtons.length) % tabButtons.length;
+            const nextButton = tabButtons[nextIndex];
+            activateTab(nextButton);
+            nextButton.focus();
+          });
+        });
+
+        galleryImages.forEach((img) => {
+          img.setAttribute('tabindex', '0');
+          img.setAttribute('role', 'button');
+          img.setAttribute('aria-label', `Open ${img.alt || 'screenshot'}`);
+
+          img.addEventListener('click', () => openLightbox(img));
+          img.addEventListener('keydown', (event) => {
+            if (event.key === 'Enter' || event.key === ' ') {
+              event.preventDefault();
+              openLightbox(img);
+            }
+          });
+        });
+
+        appIconImages.forEach((img) => {
+          img.addEventListener('click', () => openLightbox(img));
+          img.addEventListener('keydown', (event) => {
+            if (event.key === 'Enter' || event.key === ' ') {
+              event.preventDefault();
+              openLightbox(img);
+            }
+          });
+        });
+
+        lightboxClose.addEventListener('click', closeLightbox);
+        lightbox.addEventListener('click', (event) => {
+          if (event.target === lightbox) {
+            closeLightbox();
+          }
+        });
+
+        document.addEventListener('keydown', (event) => {
+          if (event.key === 'Escape' && lightbox.classList.contains('open')) {
+            closeLightbox();
+          }
+        });
+      })();
+    </script>
   </body>
 </html>

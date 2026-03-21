@@ -19,7 +19,7 @@
         <a class="site-header__brand" href="index.html">Pyxis</a>
         <div class="site-header__actions">
           <nav class="site-nav" aria-label="Primary navigation">
-            <ul class="site-nav__list">
+            <ul class="site-nav__list site-nav__list--desktop">
               <li>
                 <a class="site-nav__link" href="index.html">Home</a>
               </li>
@@ -32,13 +32,27 @@
               <li>
                 <a class="site-nav__link" href="contact.html">Contact</a>
               </li>
-              <li>
+              <li class="site-nav__item--presskit">
                 <a class="site-nav__link" href="presskit.html">Press Kit</a>
               </li>
               <li>
                 <a class="site-nav__link" href="https://apps.apple.com/us/app/pyxis-notes-locations/id6639617144">Download</a>
               </li>
             </ul>
+            <details class="site-nav__mobile-menu">
+              <summary class="site-nav__hamburger" aria-label="Open navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+              </summary>
+              <ul class="site-nav__list site-nav__list--mobile">
+                <li><a class="site-nav__link" href="index.html">Home</a></li>
+                <li><a class="site-nav__link" href="shortcuts.html">Shortcuts</a></li>
+                <li><a class="site-nav__link" href="privacy.html">Privacy</a></li>
+                <li><a class="site-nav__link" href="contact.html">Contact</a></li>
+                <li><a class="site-nav__link" href="https://apps.apple.com/us/app/pyxis-notes-locations/id6639617144">Download</a></li>
+              </ul>
+            </details>
           </nav>
           <button class="theme-toggle" type="button" data-theme-toggle aria-label="Toggle theme"></button>
         </div>

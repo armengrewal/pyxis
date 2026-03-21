@@ -274,8 +274,9 @@ p.subtitle {
 
 .theme-toggle::before {
   content: "☀";
-  font-size: 0.95rem;
+  font-size: 1rem;
   line-height: 1;
+  color: currentColor;
 }
 
 .theme-toggle[data-theme-icon="moon"]::before {
@@ -323,21 +324,25 @@ p.subtitle {
   }
 
   .site-nav .site-nav__mobile-menu {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
     position: relative;
   }
 
   .site-nav__hamburger {
     list-style: none;
-    width: 2.1rem;
-    height: 2.1rem;
+    width: 1.95rem;
+    height: 1.95rem;
     border: 1px solid var(--color-theme-toggle-border);
     border-radius: 999px;
     display: inline-flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 0.2rem;
+    margin: 0;
+    padding: 0;
+    line-height: 0;
+    gap: 0.16rem;
     cursor: pointer;
   }
 
@@ -346,8 +351,8 @@ p.subtitle {
   }
 
   .site-nav__hamburger span {
-    width: 0.9rem;
-    height: 1.5px;
+    width: 0.75rem;
+    height: 1.25px;
     background: var(--color-nav-link-active);
     border-radius: 1px;
   }
